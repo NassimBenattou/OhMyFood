@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.button1 {
+  display: flex;
+  width: 186px;
+  height: 50px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.button1 p {
+  margin: auto;
+  color: white;
+}
+
+.button2 {
+  display: flex;
+  width: 186px;
+  height: 50px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.button2 p {
+  margin: auto;
+  color: white;
+}
+
+.new {
+  display: flex;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  background: #99E2D0;
+}
+.new p {
+  color: #008766;
+  font-size: 14px;
+  margin: auto;
+}
+
+.like {
+  cursor: pointer;
+}
+.like i {
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+input[type=checkbox]:checked + .like i:before {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+.toggle-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 349px;
+  height: 69px;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border-radius: 15.0431px;
+}
+.toggle-content h3 {
+  padding: 12px 0 0 15px;
+  font-size: 18px;
+}
+.toggle-content .accompagnement {
+  display: flex;
+  justify-content: space-between;
+}
+.toggle-content .accompagnement p {
+  padding: 5px 12px 15px 15px;
+  font-size: 15.04px;
+  transition: margin 0.5s;
+}
+.toggle-content .accompagnement p:first-child {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.toggle-content .accompagnement p + p {
+  font-weight: 700;
+}
+.toggle-content .add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0px;
+  transition: width 0.5s;
+  background: #99E2D0;
+  height: 69px;
+  border-radius: 0px 15px 15px 0px;
+}
+.toggle-content .add i {
+  color: white;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox]:checked + .toggle-content .accompagnement p + p {
+  margin-right: 74px;
+  transition: margin 0.5s;
+}
+input[type=checkbox]:checked + .toggle-content .add {
+  transition: width 0.5s;
+  width: 59px;
+}
+
+/*# sourceMappingURL=style.css.map */
