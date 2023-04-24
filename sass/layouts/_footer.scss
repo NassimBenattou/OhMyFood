@@ -1,0 +1,35 @@
+footer{
+
+    background-color: #353535;
+    margin-top: 66px;
+    padding-bottom: 22px;
+
+    .container{
+
+        margin-left: 25px;
+        padding-top: 22px;
+
+        h4{
+            font-family: 'Shrikhand';
+            font-weight: 400;
+            color: white;
+        }
+        
+        nav{
+            margin-top: 16px;
+
+            li{
+                margin-top: 7px;
+
+                i{
+                    color: white;
+                }
+        
+                a{  
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

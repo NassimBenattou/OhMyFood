@@ -3,6 +3,8 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style-type: none;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
@@ -122,6 +124,166 @@ input[type=checkbox]:checked + .toggle-content .accompagnement p + p {
 input[type=checkbox]:checked + .toggle-content .add {
   transition: width 0.5s;
   width: 59px;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    height: 63px;
+    display: flex;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  header nav img {
+    margin: auto;
+    width: 162px;
+    height: 44px;
+  }
+  header .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAEAEA;
+    height: 50px;
+  }
+  header .location i {
+    color: #353535;
+  }
+  header .location p {
+    margin-left: 17px;
+  }
+  header .explorer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #F6F6F6;
+  }
+  header .explorer h1 {
+    margin-top: 39.5px;
+    font-size: 24px;
+    height: 68px;
+  }
+  header .explorer > p {
+    font-size: 18px;
+    color: #353535;
+  }
+  header .explorer .button1 {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 57px;
+  }
+}
+main .fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+main .fonctionnement h2 {
+  margin-top: 48px;
+  margin-left: 20px;
+}
+main .fonctionnement .etapes {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 26px;
+  width: 322.49px;
+  height: 72.38px;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+main .fonctionnement .etapes .number {
+  position: absolute;
+  left: 15px;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #9356DC;
+}
+main .fonctionnement .etapes .number p {
+  font-size: 14.18px;
+  margin: auto;
+  color: white;
+  font-weight: 700;
+}
+main .fonctionnement .etapes i {
+  color: #7E7E7E;
+  position: absolute;
+  left: 65.98px;
+}
+main .fonctionnement .etapes:nth-child(4) i {
+  color: #9356DC;
+}
+main .restaurants {
+  margin-top: 68px;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+main .restaurants h2 {
+  margin-left: 20px;
+  padding-top: 54px;
+}
+main .restaurants .etablissement {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 340px;
+  border-radius: 15px;
+  background-color: white;
+}
+main .restaurants .etablissement img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  height: 180px;
+}
+main .restaurants .etablissement .desc {
+  margin-top: 16px;
+  margin-left: 13px;
+  padding-bottom: 12px;
+}
+main .restaurants .etablissement .desc h3 {
+  font-size: 18px;
+}
+main .restaurants .etablissement .desc p {
+  margin-top: 5px;
+  font-size: 17px;
+}
+main .restaurants .etablissement .desc .like {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+
+footer {
+  background-color: #353535;
+  margin-top: 66px;
+  padding-bottom: 22px;
+}
+footer .container {
+  margin-left: 25px;
+  padding-top: 22px;
+}
+footer .container h4 {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  color: white;
+}
+footer .container nav {
+  margin-top: 16px;
+}
+footer .container nav li {
+  margin-top: 7px;
+}
+footer .container nav li i {
+  color: white;
+}
+footer .container nav li a {
+  color: white;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */
