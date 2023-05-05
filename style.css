@@ -111,6 +111,7 @@ input[type=checkbox]:checked + .like i:before {
   border-radius: 0px 15px 15px 0px;
 }
 .toggle-content .add i {
+  visibility: hidden;
   color: white;
 }
 
@@ -125,6 +126,9 @@ input[type=checkbox]:checked + .toggle-content .add {
   transition: width 0.5s;
   width: 59px;
 }
+input[type=checkbox]:checked + .toggle-content .add i {
+  visibility: visible;
+}
 
 @media (max-width: 768px) {
   header nav {
@@ -132,10 +136,22 @@ input[type=checkbox]:checked + .toggle-content .add {
     display: flex;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   }
-  header nav img {
+  header nav a {
+    color: black;
+    margin: auto 0;
+    margin-left: 10px;
+  }
+  header nav h1 {
+    font-size: 30px;
+    font-family: "Shrikhand";
+    font-weight: 400;
     margin: auto;
-    width: 162px;
-    height: 44px;
+  }
+  header img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    overflow: hidden;
   }
   header .location {
     display: flex;
@@ -180,6 +196,7 @@ main .fonctionnement h2 {
   margin-left: 20px;
 }
 main .fonctionnement .etapes {
+  position: relative;
   display: flex;
   margin: auto;
   justify-content: center;
@@ -193,7 +210,7 @@ main .fonctionnement .etapes {
 }
 main .fonctionnement .etapes .number {
   position: absolute;
-  left: 15px;
+  left: -10px;
   display: flex;
   width: 24px;
   height: 24px;
@@ -209,13 +226,14 @@ main .fonctionnement .etapes .number p {
 main .fonctionnement .etapes i {
   color: #7E7E7E;
   position: absolute;
-  left: 65.98px;
+  left: 33.47px;
 }
 main .fonctionnement .etapes:nth-child(4) i {
   color: #9356DC;
 }
 main .restaurants {
   margin-top: 68px;
+  padding-bottom: 66px;
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
@@ -225,7 +243,10 @@ main .restaurants h2 {
   margin-left: 20px;
   padding-top: 54px;
 }
-main .restaurants .etablissement {
+main .restaurants a {
+  color: black;
+}
+main .restaurants a .etablissement {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -234,33 +255,83 @@ main .restaurants .etablissement {
   border-radius: 15px;
   background-color: white;
 }
-main .restaurants .etablissement img {
+main .restaurants a .etablissement img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   object-fit: cover;
   height: 180px;
 }
-main .restaurants .etablissement .desc {
+main .restaurants a .etablissement .desc {
   margin-top: 16px;
   margin-left: 13px;
   padding-bottom: 12px;
 }
-main .restaurants .etablissement .desc h3 {
+main .restaurants a .etablissement .desc h3 {
   font-size: 18px;
 }
-main .restaurants .etablissement .desc p {
+main .restaurants a .etablissement .desc p {
   margin-top: 5px;
   font-size: 17px;
 }
-main .restaurants .etablissement .desc .like {
+main .restaurants a .etablissement .desc .like {
   position: absolute;
   right: 10px;
   bottom: 15px;
 }
+main .carte {
+  background-color: #F6F6F6;
+  padding-bottom: 53px;
+  position: relative;
+  margin-top: -55px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+main .carte .titre {
+  display: flex;
+}
+main .carte .titre h1 {
+  margin-top: 32px;
+  margin-left: 17px;
+  font-size: 28px;
+  font-family: "Shrikhand";
+  font-weight: 400;
+}
+main .carte .titre .like {
+  margin: auto;
+  margin-top: 40px;
+}
+main .carte .titre-menu h3 {
+  position: relative;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-left: 13px;
+  margin-top: 42px;
+}
+main .carte .titre-menu h3:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  bottom: -10px;
+  left: 0;
+  background-color: #99E2D0;
+}
+main .carte .menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+main .carte .menu .toggle-content {
+  background-color: white;
+}
+main .carte .button1 {
+  margin: auto;
+  margin-top: 40px;
+}
 
 footer {
   background-color: #353535;
-  margin-top: 66px;
   padding-bottom: 22px;
 }
 footer .container {
