@@ -1,14 +1,19 @@
 main{
 
     .fonctionnement{
-        display: flex;
-        flex-direction: column;
+        max-width: 1440px;
+        margin: auto;
+
 
         h2{
-            margin-top: 48px;
-            margin-left: 20px;
+            margin-top: 50px;
+            margin-left: 70px;
         }
-        
+
+        .content{
+            display: flex;
+        }
+
         .etapes{
             position: relative;
             display: flex;
@@ -54,62 +59,86 @@ main{
     }
 
     .restaurants{
-        margin-top: 68px;
-        padding-bottom: 66px;
         background-color: #F6F6F6;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-
+        max-width: 1440px;
+        margin: auto;
+        margin-top: 54px;
+        border-radius: 25px;
+        margin-bottom: 25px;
+        
         h2{
-            margin-left: 20px;
             padding-top: 54px;
+            margin-left: 70px;
+
         }
 
-        a{
-            color: black;
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 100px;
+            margin: auto;
+            margin-top: 48px;
+            margin-bottom: 30px;
+            padding-bottom: 70px;
             
-            .etablissement{
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                margin: auto;
-                width: 340px;
-                border-radius: 15px;
-                background-color: white;
-    
-                img{
-                    border-top-left-radius: 15px;
-                    border-top-right-radius: 15px;
-                    object-fit: cover;
-                    height: 180px;
-                }
-    
-                .desc{
-                    margin-top: 16px;
-                    margin-left: 13px;
-                    padding-bottom: 12px;
-    
-                    h3{
-                        font-size: 18px;
+
+
+            a{
+                color: black;
+                
+                .etablissement{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    margin: auto;
+                    width: 490px;
+                    border-radius: 15px;
+                    background-color: white;
+
+        
+                    img{
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px;
+                        object-fit: cover;
+                        height: 180px;
                     }
-    
-                    p{
-                        margin-top: 5px;
-                        font-size: 17px;
-                    }
-    
-                    .like{
+
+                    .new{
                         position: absolute;
-                        right: 10px;
-                        bottom: 15px;
+                        top: 15px;
+                        right: 15px;
+                    }
+        
+                    .desc{
+                        margin-top: 16px;
+                        margin-left: 13px;
+                        padding-bottom: 12px;
+        
+                        h3{
+                            font-size: 18px;
+                        }
+        
+                        p{
+                            margin-top: 5px;
+                            font-size: 17px;
+                        }
+        
+                        .like{
+                            position: absolute;
+                            right: 10px;
+                            bottom: 15px;
+                        }
                     }
                 }
             }
         }
+        
     }
 
     .carte{
+        margin: auto;
+        width: 375px;
         background-color: #F6F6F6;
         padding-bottom: 53px;
         position: relative;
@@ -119,19 +148,23 @@ main{
 
         .titre{
             display: flex;
+            justify-content: center;
+            align-items: center;
+
             
             h1{
                 margin-top: 32px;
-                margin-left: 17px;
+    
                 font-size: 28px;
                 font-family: 'Shrikhand';
                 font-weight: 400;
             }
 
             .like{
-                margin: auto;
-                margin-top: 40px;
-            }
+                margin-left: 20px;
+                margin-top: 30px;
+            }   
+           
         }
 
         .titre-menu{
@@ -169,6 +202,69 @@ main{
         .button1{
             margin: auto;
             margin-top: 40px;
+        }
+    }
+}
+
+@media(max-width: 768px){
+    
+    .fonctionnement{
+        flex-direction: column;
+        width: 375px;
+        margin: auto;   
+
+        .content{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .restaurants{
+        margin: auto;
+        padding-bottom: 66px;
+        display: flex;
+        flex-direction: column;
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin: auto;
+            margin-top: 18px; 
+        }
+    }
+}
+
+@media(max-width: 1024px){
+
+    .fonctionnement{
+        margin: auto;
+        
+
+      
+
+        .etapes{
+            width: auto;
+
+            p{
+                margin-left: 26px;
+            }
+        }
+    }
+
+}
+
+@media(max-width: 1440px){
+
+    .fonctionnement{
+        margin: auto;
+
+        .etapes{
+            width: auto;
+
+            p{
+                margin-left: 26px;
+            }
         }
     }
 }
