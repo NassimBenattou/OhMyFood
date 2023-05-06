@@ -1,27 +1,31 @@
 main{
 
     .fonctionnement{
+        display: flex;
         max-width: 1440px;
         margin: auto;
-
-
-        h2{
+        justify-content: center;
+        margin-bottom: 50px;
+        
+        .content{            
             margin-top: 50px;
-            margin-left: 70px;
-        }
-
-        .content{
             display: flex;
+            flex-direction: column;
+            
+            .step{
+                gap: 37px;
+                display: flex;
+            }
         }
 
         .etapes{
             position: relative;
-            display: flex;
-            margin: auto;
+            display: flex;  
             justify-content: center;
             align-items: center;
             margin-top: 26px;
-            width: 322.49px;
+            max-width: 322.49px;
+            min-width: 300.49px;
             height: 72.38px;
             background-color: #F6F6F6;
             border-radius: 20px;
@@ -59,79 +63,74 @@ main{
     }
 
     .restaurants{
-        background-color: #F6F6F6;
-        max-width: 1440px;
+        display: flex;
         margin: auto;
-        margin-top: 54px;
-        border-radius: 25px;
-        margin-bottom: 25px;
+        justify-content: center;
+        background-color: #F3F3F3;
+        max-width: 1440px;
         
-        h2{
-            padding-top: 54px;
-            margin-left: 70px;
-
-        }
-
         .content{
+            margin-top: 30px;
+            margin-bottom: 50px;
+            max-width: 945px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 100px;
-            margin: auto;
-            margin-top: 48px;
-            margin-bottom: 30px;
-            padding-bottom: 70px;
+            flex-direction: column;
             
+            .restau{
+                margin-top: 28px;
+                gap: 80px;
+                display: flex;
+                flex-wrap: wrap;
 
-
-            a{
-                color: black;
-                
-                .etablissement{
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    margin: auto;
-                    width: 490px;
-                    border-radius: 15px;
-                    background-color: white;
-
-        
-                    img{
-                        border-top-left-radius: 15px;
-                        border-top-right-radius: 15px;
-                        object-fit: cover;
-                        height: 180px;
-                    }
-
-                    .new{
-                        position: absolute;
-                        top: 15px;
-                        right: 15px;
-                    }
-        
-                    .desc{
-                        margin-top: 16px;
-                        margin-left: 13px;
-                        padding-bottom: 12px;
-        
-                        h3{
-                            font-size: 18px;
+                a{  
+                    color: black;
+                    
+                    .etablissement{
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        width: 430px;
+                        border-radius: 15px;
+                        background-color: white;
+    
+            
+                        img{
+                            border-top-left-radius: 15px;
+                            border-top-right-radius: 15px;
+                            object-fit: cover;
+                            height: 180px;
                         }
-        
-                        p{
-                            margin-top: 5px;
-                            font-size: 17px;
-                        }
-        
-                        .like{
+    
+                        .new{
                             position: absolute;
-                            right: 10px;
-                            bottom: 15px;
+                            top: 15px;
+                            right: 15px;
+                        }
+            
+                        .desc{
+                            margin-top: 16px;
+                            margin-left: 13px;
+                            padding-bottom: 12px;
+            
+                            h3{
+                                font-size: 18px;
+                            }
+            
+                            p{
+                                margin-top: 5px;
+                                font-size: 17px;
+                            }
+            
+                            .like{
+                                position: absolute;
+                                right: 10px;
+                                bottom: 15px;
+                            }
                         }
                     }
                 }
             }
+
         }
         
     }
@@ -208,63 +207,36 @@ main{
 
 @media(max-width: 768px){
     
-    .fonctionnement{
-        flex-direction: column;
-        width: 375px;
-        margin: auto;   
-
-        .content{
-            display: flex;
-            flex-direction: column;
-        }
-    }
-
-    .restaurants{
-        margin: auto;
-        padding-bottom: 66px;
-        display: flex;
-        flex-direction: column;
-
-        .content{
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            margin: auto;
-            margin-top: 18px; 
-        }
-    }
+    
 }
 
 @media(max-width: 1024px){
 
-    .fonctionnement{
-        margin: auto;
+    .fonctionnement{    
         
+        .content{
 
-      
-
-        .etapes{
-            width: auto;
-
-            p{
-                margin-left: 26px;
+            .step{
+                flex-direction: column;
             }
         }
     }
 
-}
+    .restaurants{
 
-@media(max-width: 1440px){
+        .content{
+              
+            .restau{
+                flex-direction: column;
+            
+                a{
+                    .etablissement{
+                        max-width: 340px;
+                    }
+                }
 
-    .fonctionnement{
-        margin: auto;
-
-        .etapes{
-            width: auto;
-
-            p{
-                margin-left: 26px;
             }
         }
     }
+
 }
