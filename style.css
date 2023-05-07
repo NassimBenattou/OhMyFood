@@ -188,6 +188,10 @@ header .explorer .button1 {
   margin-top: 40px;
   margin-bottom: 57px;
 }
+header .explorer .button1:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  cursor: pointer;
+}
 
 main .fonctionnement {
   display: flex;
@@ -238,7 +242,7 @@ main .fonctionnement .etapes i {
   position: absolute;
   left: 33.47px;
 }
-main .fonctionnement .etapes:nth-child(4) i {
+main .fonctionnement .etapes:nth-child(3) i {
   color: #9356DC;
 }
 main .restaurants {
@@ -302,7 +306,7 @@ main .restaurants .content .restau a .etablissement .desc .like {
 }
 main .carte {
   margin: auto;
-  width: 375px;
+  width: 1055px;
   background-color: #F6F6F6;
   padding-bottom: 53px;
   position: relative;
@@ -325,15 +329,19 @@ main .carte .titre .like {
   margin-left: 20px;
   margin-top: 30px;
 }
-main .carte .titre-menu h3 {
+main .carte .content {
+  width: 634px;
+  margin: auto;
+}
+main .carte .content .titre-menu h3 {
+  text-align: left;
   position: relative;
   font-weight: 300;
   text-transform: uppercase;
   font-weight: 300;
-  margin-left: 13px;
   margin-top: 42px;
 }
-main .carte .titre-menu h3:before {
+main .carte .content .titre-menu h3:before {
   content: "";
   position: absolute;
   width: 40px;
@@ -342,28 +350,53 @@ main .carte .titre-menu h3:before {
   left: 0;
   background-color: #99E2D0;
 }
-main .carte .menu {
+main .carte .content .menu {
   display: flex;
   justify-content: center;
   margin-top: 25px;
 }
-main .carte .menu .toggle-content {
+main .carte .content .menu .toggle-content {
   background-color: white;
+  width: 634px;
 }
 main .carte .button1 {
   margin: auto;
   margin-top: 40px;
 }
+main .carte .button1:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  cursor: pointer;
+}
 
 @media (max-width: 1024px) {
-  .fonctionnement .content .step {
+  main .fonctionnement .content .step {
     flex-direction: column;
   }
-  .restaurants .content .restau {
+  main .restaurants .content .restau {
     flex-direction: column;
   }
-  .restaurants .content .restau a .etablissement {
+  main .restaurants .content .restau a .etablissement {
     max-width: 340px;
+  }
+  main .carte {
+    width: 600px;
+  }
+  main .carte .content {
+    width: 349px;
+  }
+  main .carte .content .menu .toggle-content {
+    width: 349px;
+  }
+}
+@media (max-width: 768px) {
+  main .carte {
+    width: auto;
+  }
+  main .carte .content {
+    max-width: 349x;
+  }
+  main .carte .content .menu {
+    width: auto;
   }
 }
 footer {
@@ -384,6 +417,9 @@ footer .container i {
 }
 footer .container a {
   color: white;
+}
+footer .container a:hover {
+  text-decoration: underline;
 }
 footer .container h4 {
   margin-right: 50px;
@@ -409,6 +445,7 @@ footer .container .contact {
     padding-top: 22px;
     margin-left: 25px;
     flex-direction: column;
+    width: auto;
   }
   footer .container h4 {
     order: 0;
@@ -428,6 +465,86 @@ footer .container .contact {
   }
   footer .container .contact a {
     margin-top: 7px;
+  }
+}
+.background-loader {
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: hidden 1s;
+  animation-fill-mode: forwards;
+}
+.background-loader .loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  text-align: center;
+  animation-delay: 1s;
+}
+.background-loader .loader .spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 303;
+  border-radius: 100%;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+}
+.background-loader .loader .spinner1 {
+  width: 250px;
+  height: 250px;
+  border: 10px solid #FF79DA;
+  animation: spin 2s linear infinite;
+}
+.background-loader .loader .spinner2 {
+  width: 200px;
+  height: 200px;
+  border: 10px solid #9356DC;
+  animation: reverse-spin 2s linear infinite;
+}
+.background-loader .loader .spinner3 {
+  width: 150px;
+  height: 150px;
+  border: 10px solid #99E2D0;
+  animation: spin 4s linear infinite;
+}
+.background-loader .loader .loader-text {
+  position: relative;
+  font-family: "Shrikhand";
+  font-size: 20px;
+  top: 45%;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes reverse-spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+@keyframes hidden {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    visibility: hidden;
   }
 }
 

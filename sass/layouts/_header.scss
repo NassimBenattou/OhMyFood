@@ -64,6 +64,11 @@ header{
             margin: auto;
             margin-top: 40px;
             margin-bottom: 57px ;
+
+            &:hover{
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, $color-primary -5.2%, $color-secondary 110.74%);
+            cursor: pointer;
+            }
         }
     }
 }

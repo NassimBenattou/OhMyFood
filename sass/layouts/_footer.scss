@@ -18,6 +18,10 @@ footer{
         
         a{
             color: white;
+
+            &:hover{
+                text-decoration: underline;
+            }
         }
         
         h4{ 
@@ -51,6 +55,7 @@ footer{
             padding-top: 22px;
             margin-left: 25px;
             flex-direction: column;
+            width: auto;
 
             h4{
                 order: 0;

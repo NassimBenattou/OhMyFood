@@ -54,7 +54,7 @@ main{
                 left: 33.47px;
             }
 
-            &:nth-child(4){
+            &:nth-child(3){
                 i{
                     color: #9356DC;
                 }
@@ -137,7 +137,7 @@ main{
 
     .carte{
         margin: auto;
-        width: 375px;
+        width: 1055px;
         background-color: #F6F6F6;
         padding-bottom: 53px;
         position: relative;
@@ -166,77 +166,122 @@ main{
            
         }
 
-        .titre-menu{
+        .content{
+            width: 634px;
+            margin: auto;
 
-            h3{
-                position: relative;
-                font-weight: 300;
-                text-transform: uppercase;
-                font-weight: 300;
-                margin-left: 13px;
-                margin-top: 42px;
+            .titre-menu{
+    
+                h3{
+                    text-align: left;
+                    position: relative;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    margin-top: 42px;
+                }
+        
+                h3:before {
+                    content: "";
+                    position: absolute;
+                    width: 40px;
+                    height: 3px;
+                    bottom: -10px;
+                    left: 0;
+                    background-color: $color-tertiary;
+                }
             }
     
-            h3:before {
-                content: "";
-                position: absolute;
-                width: 40px;
-                height: 3px;
-                bottom: -10px;
-                left: 0;
-                background-color: $color-tertiary;
+            .menu{
+                display: flex;
+                justify-content: center;
+                margin-top: 25px;
+                
+                .toggle-content{
+                    background-color: white;
+                    width: 634px;
+                }
             }
         }
 
-        .menu{
-            display: flex;
-            justify-content: center;
-            margin-top: 25px;
-
-            .toggle-content{
-                background-color: white;
-            }
-        }
 
         .button1{
             margin: auto;
             margin-top: 40px;
+
+            &:hover{
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, $color-primary -5.2%, $color-secondary 110.74%);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px){
+
+    main{
+
+        .fonctionnement{    
+            
+            .content{
+    
+                .step{
+                    flex-direction: column;
+                }
+            }
+        }
+    
+        .restaurants{
+    
+            .content{
+                  
+                .restau{
+                    flex-direction: column;
+                
+                    a{
+                        .etablissement{
+                            max-width: 340px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    
+        .carte{
+            width: 600px;
+            
+            .content{
+                width: 349px;
+                
+                .menu{
+                    
+                    .toggle-content{
+                        width: 349px;
+                        
+                    }
+                }
+            }
         }
     }
 }
 
 @media(max-width: 768px){
     
-    
-}
+    main{
 
-@media(max-width: 1024px){
+        .carte{
+            width: auto;
 
-    .fonctionnement{    
-        
-        .content{
+            .content{
+                max-width: 349x;
 
-            .step{
-                flex-direction: column;
-            }
-        }
-    }
+                .menu{
 
-    .restaurants{
-
-        .content{
-              
-            .restau{
-                flex-direction: column;
-            
-                a{
-                    .etablissement{
-                        max-width: 340px;
-                    }
+                   width: auto  ;
                 }
-
             }
         }
     }
-
+    
 }
