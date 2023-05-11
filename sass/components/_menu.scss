@@ -9,19 +9,24 @@
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15.0431px;
 
-    h3{
-        padding: 12px 0 0 15px;
-        font-size: 18px;
+    span{
+
+        &:first-child{
+            padding: 12px 0 0 15px;
+            font-size: 18px;
+            font-weight: 700;
+        }
     }
 
     .accompagnement{
         display: flex;
         justify-content: space-between;
 
-        p{  
+        span{  
             padding: 5px 12px 15px 15px;
             font-size: 15.04px;
             transition: margin .5s;
+            font-weight: 500;
 
             &:first-child{
                 text-overflow: ellipsis;
@@ -31,9 +36,6 @@
             }
         }
 
-        p + p{
-            font-weight: 700;
-        }
     }
 
     .add{
@@ -65,7 +67,7 @@ input[type="checkbox"]{
     &:checked + .toggle-content{
 
         .accompagnement{
-            p + p{
+            span + span{
                 margin-right: 74px;
                 transition: margin .5s;
             }

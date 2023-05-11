@@ -81,51 +81,52 @@ main{
                 gap: 80px;
                 display: flex;
                 flex-wrap: wrap;
-
-                a{  
-                    color: black;
+                
+                .etablissement{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 430px;
+                    border-radius: 15px;
+                    background-color: white;
                     
-                    .etablissement{
-                        position: relative;
-                        display: flex;
-                        flex-direction: column;
+                    a{  
+                        color: black;
+                        
+                    }
+        
+                    img{
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px;
+                        object-fit: cover;
+                        height: 180px;
                         width: 430px;
-                        border-radius: 15px;
-                        background-color: white;
-    
-            
-                        img{
-                            border-top-left-radius: 15px;
-                            border-top-right-radius: 15px;
-                            object-fit: cover;
-                            height: 180px;
+                    }
+
+                    .new{
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                    }
+        
+                    .desc{
+                        margin-top: 16px;
+                        margin-left: 13px;
+                        padding-bottom: 12px;
+        
+                        h3{
+                            font-size: 18px;
                         }
-    
-                        .new{
+        
+                        p{
+                            margin-top: 5px;
+                            font-size: 17px;
+                        }
+        
+                        .like{
                             position: absolute;
-                            top: 15px;
-                            right: 15px;
-                        }
-            
-                        .desc{
-                            margin-top: 16px;
-                            margin-left: 13px;
-                            padding-bottom: 12px;
-            
-                            h3{
-                                font-size: 18px;
-                            }
-            
-                            p{
-                                margin-top: 5px;
-                                font-size: 17px;
-                            }
-            
-                            .like{
-                                position: absolute;
-                                right: 10px;
-                                bottom: 15px;
-                            }
+                            right: 10px;
+                            bottom: 15px;
                         }
                     }
                 }
@@ -169,7 +170,17 @@ main{
         .content{
             width: 634px;
             margin: auto;
+            animation: fadein 2s;
 
+            @keyframes fadein {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            
             .titre-menu{
     
                 h3{
@@ -270,15 +281,33 @@ main{
     
     main{
 
+        .restaurants{
+
+            .content{
+
+                .restau{
+
+                    .etablissement{
+
+                        width: 330px;
+
+                        img{
+                            width: 330px;
+                        }
+                    }
+                }
+            }
+        }
+
         .carte{
             width: auto;
 
             .content{
-                max-width: 349x;
+                max-width: 349px;
 
                 .menu{
 
-                   width: auto  ;
+                   width: 349px;
                 }
             }
         }

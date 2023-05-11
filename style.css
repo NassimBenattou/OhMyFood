@@ -58,6 +58,7 @@
 }
 
 input[type=checkbox]:checked + .like i:before {
+  transition: all 0.3s linear 0s;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -75,27 +76,26 @@ input[type=checkbox]:checked + .like i:before {
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15.0431px;
 }
-.toggle-content h3 {
+.toggle-content span:first-child {
   padding: 12px 0 0 15px;
   font-size: 18px;
+  font-weight: 700;
 }
 .toggle-content .accompagnement {
   display: flex;
   justify-content: space-between;
 }
-.toggle-content .accompagnement p {
+.toggle-content .accompagnement span {
   padding: 5px 12px 15px 15px;
   font-size: 15.04px;
   transition: margin 0.5s;
+  font-weight: 500;
 }
-.toggle-content .accompagnement p:first-child {
+.toggle-content .accompagnement span:first-child {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-}
-.toggle-content .accompagnement p + p {
-  font-weight: 700;
 }
 .toggle-content .add {
   display: flex;
@@ -118,7 +118,7 @@ input[type=checkbox]:checked + .like i:before {
 input[type=checkbox] {
   display: none;
 }
-input[type=checkbox]:checked + .toggle-content .accompagnement p + p {
+input[type=checkbox]:checked + .toggle-content .accompagnement span + span {
   margin-right: 74px;
   transition: margin 0.5s;
 }
@@ -265,10 +265,7 @@ main .restaurants .content .restau {
   display: flex;
   flex-wrap: wrap;
 }
-main .restaurants .content .restau a {
-  color: black;
-}
-main .restaurants .content .restau a .etablissement {
+main .restaurants .content .restau .etablissement {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -276,30 +273,34 @@ main .restaurants .content .restau a .etablissement {
   border-radius: 15px;
   background-color: white;
 }
-main .restaurants .content .restau a .etablissement img {
+main .restaurants .content .restau .etablissement a {
+  color: black;
+}
+main .restaurants .content .restau .etablissement img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   object-fit: cover;
   height: 180px;
+  width: 430px;
 }
-main .restaurants .content .restau a .etablissement .new {
+main .restaurants .content .restau .etablissement .new {
   position: absolute;
   top: 15px;
   right: 15px;
 }
-main .restaurants .content .restau a .etablissement .desc {
+main .restaurants .content .restau .etablissement .desc {
   margin-top: 16px;
   margin-left: 13px;
   padding-bottom: 12px;
 }
-main .restaurants .content .restau a .etablissement .desc h3 {
+main .restaurants .content .restau .etablissement .desc h3 {
   font-size: 18px;
 }
-main .restaurants .content .restau a .etablissement .desc p {
+main .restaurants .content .restau .etablissement .desc p {
   margin-top: 5px;
   font-size: 17px;
 }
-main .restaurants .content .restau a .etablissement .desc .like {
+main .restaurants .content .restau .etablissement .desc .like {
   position: absolute;
   right: 10px;
   bottom: 15px;
@@ -332,6 +333,15 @@ main .carte .titre .like {
 main .carte .content {
   width: 634px;
   margin: auto;
+  animation: fadein 2s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 main .carte .content .titre-menu h3 {
   text-align: left;
@@ -389,14 +399,20 @@ main .carte .button1:hover {
   }
 }
 @media (max-width: 768px) {
+  main .restaurants .content .restau .etablissement {
+    width: 330px;
+  }
+  main .restaurants .content .restau .etablissement img {
+    width: 330px;
+  }
   main .carte {
     width: auto;
   }
   main .carte .content {
-    max-width: 349x;
+    max-width: 349px;
   }
   main .carte .content .menu {
-    width: auto;
+    width: 349px;
   }
 }
 footer {
