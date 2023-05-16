@@ -59,26 +59,56 @@
     } 
 }
 
-input[type="checkbox"]{
+@media(min-width: 1024px){
 
-    display: none;
+    input[type="checkbox"]{
+
+        display: none;
 
 
-    &:checked + .toggle-content{
+        &:hover + .toggle-content{
 
-        .accompagnement{
-            span + span{
-                margin-right: 74px;
-                transition: margin .5s;
+            .accompagnement{
+                span + span{
+                    margin-right: 74px;
+                    transition: margin .5s;
+                }
+            }
+
+            .add{
+                transition: width .5s;
+                width: 59px;
+
+                i{
+                    visibility: visible;
+                }
             }
         }
+    }
+}
 
-        .add{
-            transition: width .5s;
-            width: 59px;
+@media(max-width: 1024px){
+    
+    input[type="checkbox"]{
 
-            i{
-                visibility: visible;
+        display: none;
+    
+        &:checked + .toggle-content{
+    
+            .accompagnement{
+                span + span{
+                    margin-right: 74px;
+                    transition: margin .5s;
+                }
+            }
+    
+            .add{
+                transition: width .5s;
+                width: 59px;
+    
+                i{
+                    visibility: visible;
+                }
             }
         }
     }

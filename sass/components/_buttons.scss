@@ -51,19 +51,43 @@
     }
 }
 
-input[type="checkbox"]{
+@media(min-width: 1024px){
 
-    &:checked + .like{
+    input[type="checkbox"]{
 
-        i{
-            &:before{
-                transition: all 0.3s linear 0s;
-                color: transparent;    
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-stroke-color: transparent;
-                background-image: linear-gradient(193.33deg, $color-primary -11.44%, $color-secondary 123.93%);
+        &:hover + .like{
 
+            i{
+                &:before{
+                    transition: all 0.3s linear 0s;
+                    color: transparent;    
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-stroke-color: transparent;
+                    background-image: linear-gradient(193.33deg, $color-primary -11.44%, $color-secondary 123.93%);
+
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px){
+
+    input[type="checkbox"]{
+
+        &:checked + .like{
+
+            i{
+                &:before{
+                    transition: all 0.3s linear 0s;
+                    color: transparent;    
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-stroke-color: transparent;
+                    background-image: linear-gradient(193.33deg, $color-primary -11.44%, $color-secondary 123.93%);
+
+                }
             }
         }
     }

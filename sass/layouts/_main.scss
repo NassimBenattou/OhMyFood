@@ -67,7 +67,6 @@ main{
         margin: auto;
         justify-content: center;
         background-color: #F3F3F3;
-        max-width: 1440px;
         
         .content{
             margin-top: 30px;
@@ -170,7 +169,6 @@ main{
         .content{
             width: 634px;
             margin: auto;
-            animation: fadein 2s;
 
             @keyframes fadein {
                 from {
@@ -179,6 +177,19 @@ main{
                 to {
                     opacity: 1;
                 }
+            }
+
+            .entrer{
+                animation: fadein 1s;
+                
+            }
+            
+            .plats{
+                animation: fadein 3s;
+            }
+
+            .desserts{
+                animation: fadein 5s;
             }
             
             .titre-menu{
@@ -282,18 +293,13 @@ main{
     main{
 
         .restaurants{
-
             .content{
 
                 .restau{
 
                     .etablissement{
 
-                        width: 330px;
-
-                        img{
-                            width: 330px;
-                        }
+                        width: auto;
                     }
                 }
             }

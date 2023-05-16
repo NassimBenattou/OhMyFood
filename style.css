@@ -57,15 +57,26 @@
   -webkit-text-stroke-color: black;
 }
 
-input[type=checkbox]:checked + .like i:before {
-  transition: all 0.3s linear 0s;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-stroke-color: transparent;
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+@media (min-width: 1024px) {
+  input[type=checkbox]:hover + .like i:before {
+    transition: all 0.3s linear 0s;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  }
 }
-
+@media (max-width: 1024px) {
+  input[type=checkbox]:checked + .like i:before {
+    transition: all 0.3s linear 0s;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  }
+}
 .toggle-content {
   position: relative;
   display: flex;
@@ -115,21 +126,38 @@ input[type=checkbox]:checked + .like i:before {
   color: white;
 }
 
-input[type=checkbox] {
-  display: none;
+@media (min-width: 1024px) {
+  input[type=checkbox] {
+    display: none;
+  }
+  input[type=checkbox]:hover + .toggle-content .accompagnement span + span {
+    margin-right: 74px;
+    transition: margin 0.5s;
+  }
+  input[type=checkbox]:hover + .toggle-content .add {
+    transition: width 0.5s;
+    width: 59px;
+  }
+  input[type=checkbox]:hover + .toggle-content .add i {
+    visibility: visible;
+  }
 }
-input[type=checkbox]:checked + .toggle-content .accompagnement span + span {
-  margin-right: 74px;
-  transition: margin 0.5s;
+@media (max-width: 1024px) {
+  input[type=checkbox] {
+    display: none;
+  }
+  input[type=checkbox]:checked + .toggle-content .accompagnement span + span {
+    margin-right: 74px;
+    transition: margin 0.5s;
+  }
+  input[type=checkbox]:checked + .toggle-content .add {
+    transition: width 0.5s;
+    width: 59px;
+  }
+  input[type=checkbox]:checked + .toggle-content .add i {
+    visibility: visible;
+  }
 }
-input[type=checkbox]:checked + .toggle-content .add {
-  transition: width 0.5s;
-  width: 59px;
-}
-input[type=checkbox]:checked + .toggle-content .add i {
-  visibility: visible;
-}
-
 header {
   margin: auto;
 }
@@ -250,7 +278,6 @@ main .restaurants {
   margin: auto;
   justify-content: center;
   background-color: #F3F3F3;
-  max-width: 1440px;
 }
 main .restaurants .content {
   margin-top: 30px;
@@ -333,7 +360,6 @@ main .carte .titre .like {
 main .carte .content {
   width: 634px;
   margin: auto;
-  animation: fadein 2s;
 }
 @keyframes fadein {
   from {
@@ -342,6 +368,15 @@ main .carte .content {
   to {
     opacity: 1;
   }
+}
+main .carte .content .entrer {
+  animation: fadein 1s;
+}
+main .carte .content .plats {
+  animation: fadein 3s;
+}
+main .carte .content .desserts {
+  animation: fadein 5s;
 }
 main .carte .content .titre-menu h3 {
   text-align: left;
@@ -400,10 +435,7 @@ main .carte .button1:hover {
 }
 @media (max-width: 768px) {
   main .restaurants .content .restau .etablissement {
-    width: 330px;
-  }
-  main .restaurants .content .restau .etablissement img {
-    width: 330px;
+    width: auto;
   }
   main .carte {
     width: auto;
