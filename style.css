@@ -435,7 +435,10 @@ main .carte .button1:hover {
 }
 @media (max-width: 768px) {
   main .restaurants .content .restau .etablissement {
-    width: auto;
+    width: 300px;
+  }
+  main .restaurants .content .restau .etablissement img {
+    width: 300px;
   }
   main .carte {
     width: auto;

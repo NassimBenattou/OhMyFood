@@ -299,7 +299,11 @@ main{
 
                     .etablissement{
 
-                        width: auto;
+                        width: 300px;
+
+                        img{
+                            width: 300px;
+                        }
                     }
                 }
             }
